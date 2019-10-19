@@ -20,3 +20,21 @@ Good luck, guys!
 ## 问题
 - 据反映安卓或者Windows客户端可能无法订阅成功，请为添加的每一个节点设置相同的**分组**
 
+
+
+wget https://www.moerats.com/usr/shell/Aria2_Rc_D.sh && bash Aria2_Rc_D.sh
+rclone mount codesofun:share /home/wwwroot/dd.yankj.ga/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
+
+https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
+https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
+
+wget https://github.com/yenkj/DirectoryLister/archive/master.zip && unzip master.zip
+cp -r  /home/wwwroot/dd.yankj.ga/DirectoryLister-master/* /home/wwwroot/dd.yankj.ga 
+
+
+/root/.aria2/aria2.conf     aria2配置
+mkdir -p /data/Download
+chmod +x /root/.aria2/autoupload.sh
+systemctl reload nginx      重载nginx
+bash /etc/init.d/rcloned status   rclone状态
+/etc/init.d/aria2 restart   重启aria2
