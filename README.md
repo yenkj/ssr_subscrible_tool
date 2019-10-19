@@ -23,18 +23,27 @@ Good luck, guys!
 
 
 wget https://www.moerats.com/usr/shell/Aria2_Rc_D.sh && bash Aria2_Rc_D.sh
+
 rclone mount codesofun:share /home/wwwroot/dd.yankj.ga/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
 
-https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
-https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
+mkdir -p /data/Download  创建下载目录
+
+/root/.aria2    aria2文件夹
+
+wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
+
+wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
 
 wget https://github.com/yenkj/DirectoryLister/archive/master.zip && unzip master.zip
+
 cp -r  /home/wwwroot/dd.yankj.ga/DirectoryLister-master/* /home/wwwroot/dd.yankj.ga 
 
+rm -rf master.zip DirectoryLister-master
 
-/root/.aria2/aria2.conf     aria2配置
-mkdir -p /data/Download
-chmod +x /root/.aria2/autoupload.sh
+chmod +x /root/.aria2/autoupload.sh 给予权限
+
 systemctl reload nginx      重载nginx
+
 bash /etc/init.d/rcloned status   rclone状态
+
 /etc/init.d/aria2 restart   重启aria2
