@@ -44,6 +44,8 @@ chmod +x /root/.aria2/autoupload.sh 给予权限
 
 systemctl reload nginx      重载nginx
 
+/etc/nginx/conf.d         nginx文件夹
+
 bash /etc/init.d/rcloned status   rclone状态
 
 /etc/init.d/aria2 restart   重启aria2
