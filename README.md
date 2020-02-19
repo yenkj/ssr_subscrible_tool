@@ -49,3 +49,5 @@ systemctl reload nginx      重载nginx
 bash /etc/init.d/rcloned status   rclone状态
 
 /etc/init.d/aria2 restart   重启aria2
+
+https://quirky-bardeen-bde2df.netlify.com/
