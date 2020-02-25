@@ -53,3 +53,22 @@ bash /etc/init.d/rcloned status   rclone状态
 /etc/init.d/aria2 restart   重启aria2
 
 https://quirky-bardeen-bde2df.netlify.com/
+
+
+
+php7.0因为依赖关系安装失败的解决方案
+ php7.0-common
+ php7.0-json
+ php7.0-opcache
+ php7.0-readline
+ php7.0-cli
+ libapache2-mod-php7.0
+ php7.0
+E: Sub-process /usr/bin/dpkg returned an error code (1)
+遇到以上问题，解决方法如下：
+
+sudo mv /var/lib/dpkg/info /var/lib/dpkg/info.bak //现将info文件夹更名
+sudo mkdir /var/lib/dpkg/info //再新建一个新的info文件夹
+
+sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
+
