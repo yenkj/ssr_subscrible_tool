@@ -34,6 +34,8 @@ wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.co
 
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
 
+wget https://www.moerats.com/usr/shell/DirectoryLister_ssl.sh && bash DirectoryLister_ssl.sh
+
 wget https://github.com/yenkj/DirectoryLister/archive/master.zip && unzip master.zip
 
 cp -r  /home/wwwroot/dd.yankj.ga/DirectoryLister-master/* /home/wwwroot/dd.yankj.ga 
