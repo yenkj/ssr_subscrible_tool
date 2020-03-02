@@ -72,3 +72,8 @@ sudo mkdir /var/lib/dpkg/info //再新建一个新的info文件夹
 
 sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
 
+wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0-nocheckvirt/tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
+
+bash tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
+
+
