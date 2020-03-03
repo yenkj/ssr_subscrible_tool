@@ -4,7 +4,7 @@ ption: Aria2 download completes calling Rclone upload
 #Blog: https://p3terx.com
 downloadpath='/data/Download' #Aria2下载目录
 name='codesofun' #配置Rclone时填写的name
-folder='/share' #网盘里的文件夹，留空为整个网盘。
+folder='/share/tv' #网盘里的文件夹，留空为整个网盘。
 
 #=================下面不需要修改===================
 filepath=$3 #Aria2传递给脚本的文件路径。BT下载有多个文件时该值为文件夹内第一个文件，如/root/Download/a/b/1.mp4
