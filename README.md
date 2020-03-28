@@ -26,7 +26,7 @@ wget https://www.moerats.com/usr/shell/Aria2_Rc_D.sh && bash Aria2_Rc_D.sh
 
 rclone mount codesofun:share /home/wwwroot/dd.yankj.ga/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
 
-mkdir -p /data/Download  创建下载目录
+mkdir -p /root/Download  创建下载目录
 
 /root/.aria2    aria2文件夹
 
