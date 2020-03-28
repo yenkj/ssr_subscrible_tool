@@ -30,10 +30,12 @@ rclone mount codesofun:share /home/wwwroot/dd.yankj.ga/Cloud --allow-other --all
 - Aria2
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh && chmod +x aria2.sh && bash aria2.sh
 - aria2文件夹 `/root/.aria2`    
+
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
 
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
 - ariang
+
 apt-get install unzip -y
 
 mkdir /home/wwwroot/domain.com/ariaNg  
