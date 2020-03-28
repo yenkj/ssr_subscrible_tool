@@ -44,7 +44,10 @@ User=root
 [Install]
 WantedBy=default.target
 EOF
-
+- 设置开机自启：systemctl enable rclone
+- 重启：systemctl restart rclone
+- 停止：systemctl stop rclone
+- 状态：systemctl status rclone
 - rclone状态 `bash /etc/init.d/rcloned status`   
 
 ## Aria2和ariang
