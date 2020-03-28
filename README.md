@@ -29,11 +29,17 @@ rclone mount codesofun:share /home/wwwroot/dd.yankj.ga/Cloud --allow-other --all
 ## Aria2和ariang
 
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+
 apt-get install unzip -y
+
 mkdir /home/wwwroot/domain.com/ariaNg  #将domain改成你的域名再运行
+
 cd /home/wwwroot/domain.com/ariaNg
+
 wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip && unzip aria-ng-0.2.0.zip  
+
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
+
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
 - 创建下载目录 `mkdir -p /root/Download`  
 - aria2文件夹 `/root/.aria2`    
@@ -41,7 +47,9 @@ wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autouplo
 - 给予权限 `chmod +x /root/.aria2/autoupload.sh`
 ## H5ai下载脚本
 apt-get install git -y
+
 git clone https://github.com/wulabing/h5ai_onekey_install-lnp-.git h5ai
+
 cd h5ai
 - Debian 8运行命令
 bash h5ai.sh
@@ -51,14 +59,18 @@ sed -i '53,54d' h5ai.sh && bash h5ai.sh
 wget https://github.com/Pearlulu/h5ai_dplayer/archive/master.zip && unzip master.zip
 ## DirectoryLister
 wget https://www.moerats.com/usr/shell/DirectoryLister_ssl.sh && bash DirectoryLister_ssl.sh
+
 wget https://github.com/yenkj/DirectoryLister/archive/master.zip && unzip master.zip
+
 cp -r  /home/wwwroot/dd.yankj.ga/DirectoryLister-master/* /home/wwwroot/dd.yankj.ga 
+
 rm -rf master.zip DirectoryLister-master
 ## nginx
-systemctl reload nginx      重载nginx
-/etc/nginx/conf.d         nginx文件夹
+- 重载nginx `systemctl reload nginx`      
+- nginx文件夹 `/etc/nginx/conf.d`         
 ## openvz bbr
 wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0-nocheckvirt/tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
+
 bash tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
 ## SSR订阅地址
 https://quirky-bardeen-bde2df.netlify.com/
