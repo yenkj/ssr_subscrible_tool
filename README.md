@@ -58,6 +58,8 @@ bash h5ai.sh
 - Debian 9运行命令
 sed -i '53,54d' h5ai.sh && bash h5ai.sh
 - H5ai修改版
+cd /home/wwwroot/dd.yankj.ga/Cloud
+
 wget https://github.com/Pearlulu/h5ai_dplayer/archive/master.zip && unzip master.zip
 ## DirectoryLister
 wget https://www.moerats.com/usr/shell/DirectoryLister_ssl.sh && bash DirectoryLister_ssl.sh
