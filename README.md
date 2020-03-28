@@ -34,6 +34,20 @@ wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.co
 
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
 
+## H5ai下载脚本
+apt-get install git -y
+git clone https://github.com/wulabing/h5ai_onekey_install-lnp-.git h5ai
+cd h5ai
+
+#Debian 8运行命令
+bash h5ai.sh
+
+#Debian 9运行命令
+sed -i '53,54d' h5ai.sh && bash h5ai.sh
+#H5ai修改版
+wget https://github.com/Pearlulu/h5ai_dplayer/archive/master.zip && unzip master.zip
+
+#DirectoryLister
 wget https://www.moerats.com/usr/shell/DirectoryLister_ssl.sh && bash DirectoryLister_ssl.sh
 
 wget https://github.com/yenkj/DirectoryLister/archive/master.zip && unzip master.zip
