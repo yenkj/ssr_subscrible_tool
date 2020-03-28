@@ -53,11 +53,17 @@ apt-get install git -y
 git clone https://github.com/wulabing/h5ai_onekey_install-lnp-.git h5ai
 
 cd h5ai
-- Debian 8运行命令
+
+Debian 8运行命令
+
 bash h5ai.sh
-- Debian 9运行命令
+ 
+Debian 9运行命令
+
 sed -i '53,54d' h5ai.sh && bash h5ai.sh
+
 - H5ai修改版
+
 cd /home/wwwroot/dd.yankj.ga/Cloud
 
 wget https://github.com/Pearlulu/h5ai_dplayer/archive/master.zip && unzip master.zip
