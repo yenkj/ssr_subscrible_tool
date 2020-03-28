@@ -19,19 +19,25 @@ Good luck, guys!
 
 ## 问题
 - 据反映安卓或者Windows客户端可能无法订阅成功，请为添加的每一个节点设置相同的**分组**
-
-
-
-wget https://www.moerats.com/usr/shell/Aria2_Rc_D.sh && bash Aria2_Rc_D.sh
-
+## rclone
+curl https://rclone.org/install.sh | sudo bash
+rclone config
+## 挂载
 rclone mount codesofun:share /home/wwwroot/dd.yankj.ga/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
+- rclone状态 bash /etc/init.d/rcloned status   
 
-mkdir -p /root/Download  创建下载目录
+## Aria2和ariang
 
-/root/.aria2    aria2文件夹
+wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+apt-get install unzip -y
+mkdir /home/wwwroot/domain.com/ariaNg  #将domain改成你的域名再运行
+cd /home/wwwroot/domain.com/ariaNg
+wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip && unzip aria-ng-0.2.0.zip
 
+- 创建下载目录 mkdir -p /root/Download  
+- aria2文件夹 /root/.aria2    
+- 重启aria2 /etc/init.d/aria2 restart   
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
-
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
 
 ## H5ai下载脚本
@@ -39,15 +45,15 @@ apt-get install git -y
 git clone https://github.com/wulabing/h5ai_onekey_install-lnp-.git h5ai
 cd h5ai
 
-#Debian 8运行命令
+- Debian 8运行命令
 bash h5ai.sh
 
-#Debian 9运行命令
+- Debian 9运行命令
 sed -i '53,54d' h5ai.sh && bash h5ai.sh
-#H5ai修改版
+- H5ai修改版
 wget https://github.com/Pearlulu/h5ai_dplayer/archive/master.zip && unzip master.zip
 
-#DirectoryLister
+## DirectoryLister
 wget https://www.moerats.com/usr/shell/DirectoryLister_ssl.sh && bash DirectoryLister_ssl.sh
 
 wget https://github.com/yenkj/DirectoryLister/archive/master.zip && unzip master.zip
@@ -57,37 +63,16 @@ cp -r  /home/wwwroot/dd.yankj.ga/DirectoryLister-master/* /home/wwwroot/dd.yankj
 rm -rf master.zip DirectoryLister-master
 
 chmod +x /root/.aria2/autoupload.sh 给予权限
-
+## nginx
 systemctl reload nginx      重载nginx
 
 /etc/nginx/conf.d         nginx文件夹
-
-bash /etc/init.d/rcloned status   rclone状态
-
-/etc/init.d/aria2 restart   重启aria2
-
-https://quirky-bardeen-bde2df.netlify.com/
-
-
-
-php7.0因为依赖关系安装失败的解决方案
- php7.0-common
- php7.0-json
- php7.0-opcache
- php7.0-readline
- php7.0-cli
- libapache2-mod-php7.0
- php7.0
-E: Sub-process /usr/bin/dpkg returned an error code (1)
-遇到以上问题，解决方法如下：
-
-sudo mv /var/lib/dpkg/info /var/lib/dpkg/info.bak //现将info文件夹更名
-sudo mkdir /var/lib/dpkg/info //再新建一个新的info文件夹
-
-sudo mv /var/lib/dpkg/info.bak /var/lib/dpkg/info
-
+## openvz bbr
 wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0-nocheckvirt/tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
 
 bash tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
+
+## SSR订阅地址
+https://quirky-bardeen-bde2df.netlify.com/
 
 
