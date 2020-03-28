@@ -64,15 +64,20 @@ sed -i '53,54d' h5ai.sh && bash h5ai.sh
 
 - H5ai修改版
 
-cd /home/wwwroot/dd.yankj.ga/Cloud
+cd /home/wwwroot/domain.com/Cloud
 
 wget https://github.com/Pearlulu/h5ai_dplayer/archive/master.zip && unzip master.zip
+
+cp -r  /home/wwwroot/domain.com/h5ai_dplayer-master/* /home/wwwroot/domain.com
+
+rm -rf master.zip h5ai_dplayer-master
+
 ## DirectoryLister
 wget https://www.moerats.com/usr/shell/DirectoryLister_ssl.sh && bash DirectoryLister_ssl.sh
 
 wget https://github.com/yenkj/DirectoryLister/archive/master.zip && unzip master.zip
 
-cp -r  /home/wwwroot/dd.yankj.ga/DirectoryLister-master/* /home/wwwroot/dd.yankj.ga 
+cp -r  /home/wwwroot/domain.com/DirectoryLister-master/* /home/wwwroot/domain.com
 
 rm -rf master.zip DirectoryLister-master
 ## nginx
