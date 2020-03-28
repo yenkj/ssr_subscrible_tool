@@ -23,7 +23,7 @@ Good luck, guys!
 curl https://rclone.org/install.sh | sudo bash
 rclone config
 ## 挂载
-rclone mount codesofun:share /home/wwwroot/dd.yankj.ga/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
+rclone mount banana:share /home/wwwroot/domain.com/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
 - rclone状态 `bash /etc/init.d/rcloned status`   
 
 ## Aria2和ariang
