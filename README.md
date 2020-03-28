@@ -24,6 +24,27 @@ curl https://rclone.org/install.sh | sudo bash
 rclone config
 ## 挂载
 rclone mount banana:share /home/wwwroot/domain.com/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
+
+fusermount -qzu /home/wwwroot/domain.com/Cloud
+
+command="mount banana:share /home/wwwroot/domain.com/Cloud --allow-other --allow-non-empty --vfs-cache-mode"
+
+## 以下是一整条命令，一起复制到SSH客户端运行
+cat > /etc/systemd/system/rclone.service <<EOF
+[Unit]
+Description=Rclone
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=$(command -v rclone) ${command}
+Restart=on-abort
+User=root
+
+[Install]
+WantedBy=default.target
+EOF
+
 - rclone状态 `bash /etc/init.d/rcloned status`   
 
 ## Aria2和ariang
