@@ -27,24 +27,24 @@ rclone mount codesofun:share /home/wwwroot/dd.yankj.ga/Cloud --allow-other --all
 - rclone状态 `bash /etc/init.d/rcloned status`   
 
 ## Aria2和ariang
-
+- Aria2
 wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+- aria2文件夹 `/root/.aria2`    
+wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
 
+wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
+- ariang
 apt-get install unzip -y
 
-mkdir /home/wwwroot/domain.com/ariaNg  #将domain改成你的域名再运行
+mkdir /home/wwwroot/domain.com/ariaNg  
 
 cd /home/wwwroot/domain.com/ariaNg
 
 wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip && unzip aria-ng-0.2.0.zip  
-
-wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
-
-wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
 - 创建下载目录 `mkdir -p /root/Download`  
-- aria2文件夹 `/root/.aria2`    
-- 重启aria2 `/etc/init.d/aria2 restart`
 - 给予权限 `chmod +x /root/.aria2/autoupload.sh`
+- 重启aria2 `/etc/init.d/aria2 restart`
+
 ## H5ai下载脚本
 apt-get install git -y
 
