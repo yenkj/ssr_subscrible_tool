@@ -1,4 +1,7 @@
 # 香蕉云
+# RU justhost
+
+ssr://Mi41Ni4yNDEuODE6MzE0MDA6YXV0aF9zaGExX3Y0OmFlcy0yNTYtY2ZiOnRsczEuMl90aWNrZXRfYXV0aDpibmwxSmtkU1FTcGtaZy8_b2Jmc3BhcmFtPSZyZW1hcmtzPTZhYVo2SldKNUxxUjRwbWxMVkpWS1BDZmtKUXAmZ3JvdXA9NmFhWjZKV0o1THFSOEotbm9B
 
 # JP Oracle
 
