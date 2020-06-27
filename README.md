@@ -20,7 +20,8 @@ Good luck, guys!
 ## 问题
 - 据反映安卓或者Windows客户端可能无法订阅成功，请为添加的每一个节点设置相同的**分组**
 ## rclone
-curl https://rclone.org/install.sh | sudo bash
+wget https://www.moerats.com/usr/shell/rclone_debian.sh && bash rclone_debian.sh
+
 rclone config
 ## 挂载
 rclone mount banana:share /home/wwwroot/domain.com/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
