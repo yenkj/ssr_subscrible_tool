@@ -36,6 +36,7 @@ Debian 9运行命令
 sed -i '53,54d' h5ai.sh && bash h5ai.sh
 
 - H5ai修改版
+mkdir /home/wwwroot/Cloud
 
 cd /home/wwwroot/Cloud
 
