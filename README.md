@@ -25,25 +25,27 @@ wget https://www.moerats.com/usr/shell/rclone_debian.sh && bash rclone_debian.sh
 rclone config
 ## 挂载
 
-rclone mount banana:share /home/wwwroot/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
+mkdir /home/wwwroot/Cloud
 
-command="mount banana:share /home/wwwroot/Cloud --allow-other --allow-non-empty --vfs-cache-mode"
+rclone mount banana:share /home/wwwroot/Cloud --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000
+
+command="mount banana:share /home/wwwroot/Cloud --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000"
 ## 以下是一整条命令，一起复制到SSH客户端运行
 
-cat > /etc/systemd/system/rclone.service <<EOF
-[Unit]
-Description=Rclone
-After=network-online.target
+- cat > /etc/systemd/system/rclone.service <<EOF
+- [Unit]
+- Description=Rclone
+- After=network-online.target
 
-[Service]
-Type=simple
-ExecStart=$(command -v rclone) ${command}
-Restart=on-abort
-User=root
+- [Service]
+- Type=simple
+- ExecStart=$(command -v rclone) ${command}
+- Restart=on-abort
+- User=root
 
-[Install]
-WantedBy=default.target
-EOF
+- [Install]
+- WantedBy=default.target
+- EOF
 
 - 设置开机自启：systemctl enable rclone
 - 重启：systemctl restart rclone
