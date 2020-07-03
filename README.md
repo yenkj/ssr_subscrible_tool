@@ -24,13 +24,12 @@ wget https://www.moerats.com/usr/shell/rclone_debian.sh && bash rclone_debian.sh
 
 rclone config
 ## 挂载
-rclone mount banana:share /home/wwwroot/domain.com/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
 
-fusermount -qzu /home/wwwroot/domain.com/Cloud
+rclone mount banana:share /home/wwwroot/Cloud --allow-other --allow-non-empty --vfs-cache-mode writes &
 
-command="mount banana:share /home/wwwroot/domain.com/Cloud --allow-other --allow-non-empty --vfs-cache-mode"
-
+command="mount banana:share /home/wwwroot/Cloud --allow-other --allow-non-empty --vfs-cache-mode"
 ## 以下是一整条命令，一起复制到SSH客户端运行
+
 cat > /etc/systemd/system/rclone.service <<EOF
 [Unit]
 Description=Rclone
@@ -45,11 +44,15 @@ User=root
 [Install]
 WantedBy=default.target
 EOF
+
 - 设置开机自启：systemctl enable rclone
 - 重启：systemctl restart rclone
 - 停止：systemctl stop rclone
 - 状态：systemctl status rclone  
 
+## 卸载
+
+fusermount -qzu /home/wwwroot/Cloud
 ## Aria2和ariang
 - Aria2
 
@@ -63,9 +66,9 @@ wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autouplo
 
 apt-get install unzip -y
 
-mkdir /home/wwwroot/domain.com/ariaNg  
+mkdir /home/wwwroot/ariaNg  
 
-cd /home/wwwroot/domain.com/ariaNg
+cd /home/wwwroot/ariaNg
 
 wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip && unzip aria-ng-0.2.0.zip  
 - 创建下载目录 `mkdir -p /root/Download`  
@@ -89,13 +92,13 @@ sed -i '53,54d' h5ai.sh && bash h5ai.sh
 
 - H5ai修改版
 
-cd /home/wwwroot/domain.com/Cloud
+cd /home/wwwroot/Cloud
 
 wget https://github.com/Pearlulu/h5ai_dplayer/archive/master.zip && unzip master.zip
 
-cp -r  /home/wwwroot/domain.com/h5ai_dplayer-master/* /home/wwwroot/domain.com
+cp -r  /home/wwwroot/h5ai_dplayer-master/* /home/wwwroot
 
-rm -rf master.zip h5ai_dplayer-master
+rm -rf master.zip h5ai_dplayer-master hls_aria2.sh subtovtt.sh hls_general.sh README.md
 
 ## DirectoryLister
 wget https://www.moerats.com/usr/shell/DirectoryLister_ssl.sh && bash DirectoryLister_ssl.sh
@@ -107,7 +110,7 @@ cp -r  /home/wwwroot/domain.com/DirectoryLister-master/* /home/wwwroot/domain.co
 rm -rf master.zip DirectoryLister-master
 ## nginx
 - 重载nginx `systemctl reload nginx`      
-- nginx文件夹 `/etc/nginx/conf.d`         
+- nginx文件夹 `/etc/nginx/conf/conf.d`         
 ## openvz bbr
 wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0-nocheckvirt/tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
 
