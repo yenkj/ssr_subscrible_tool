@@ -19,6 +19,41 @@ Good luck, guys!
 
 ## 问题
 - 据反映安卓或者Windows客户端可能无法订阅成功，请为添加的每一个节点设置相同的**分组**
+
+## H5ai下载脚本
+apt-get install git -y
+
+git clone https://github.com/wulabing/h5ai_onekey_install-lnp-.git h5ai
+
+cd h5ai
+
+Debian 8运行命令
+
+bash h5ai.sh
+ 
+Debian 9运行命令
+
+sed -i '53,54d' h5ai.sh && bash h5ai.sh
+
+- H5ai修改版
+
+cd /home/wwwroot/Cloud
+
+wget https://github.com/Pearlulu/h5ai_dplayer/archive/master.zip && unzip master.zip
+
+cp -r  /home/wwwroot/h5ai_dplayer-master/* /home/wwwroot
+
+rm -rf master.zip h5ai_dplayer-master hls_aria2.sh subtovtt.sh hls_general.sh README.md
+
+## DirectoryLister
+wget https://www.moerats.com/usr/shell/DirectoryLister_ssl.sh && bash DirectoryLister_ssl.sh
+
+wget https://github.com/yenkj/DirectoryLister/archive/master.zip && unzip master.zip
+
+cp -r  /home/wwwroot/domain.com/DirectoryLister-master/* /home/wwwroot/domain.com
+
+rm -rf master.zip DirectoryLister-master
+
 ## rclone
 wget https://www.moerats.com/usr/shell/rclone_debian.sh && bash rclone_debian.sh
 
@@ -77,39 +112,7 @@ wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip && unzip aria-ng-0.2.0.z
 - 给予权限 `chmod +x /root/.aria2/autoupload.sh`
 - 重启aria2 `/etc/init.d/aria2 restart`
 
-## H5ai下载脚本
-apt-get install git -y
 
-git clone https://github.com/wulabing/h5ai_onekey_install-lnp-.git h5ai
-
-cd h5ai
-
-Debian 8运行命令
-
-bash h5ai.sh
- 
-Debian 9运行命令
-
-sed -i '53,54d' h5ai.sh && bash h5ai.sh
-
-- H5ai修改版
-
-cd /home/wwwroot/Cloud
-
-wget https://github.com/Pearlulu/h5ai_dplayer/archive/master.zip && unzip master.zip
-
-cp -r  /home/wwwroot/h5ai_dplayer-master/* /home/wwwroot
-
-rm -rf master.zip h5ai_dplayer-master hls_aria2.sh subtovtt.sh hls_general.sh README.md
-
-## DirectoryLister
-wget https://www.moerats.com/usr/shell/DirectoryLister_ssl.sh && bash DirectoryLister_ssl.sh
-
-wget https://github.com/yenkj/DirectoryLister/archive/master.zip && unzip master.zip
-
-cp -r  /home/wwwroot/domain.com/DirectoryLister-master/* /home/wwwroot/domain.com
-
-rm -rf master.zip DirectoryLister-master
 ## nginx
 - 重载nginx `systemctl reload nginx`      
 - nginx文件夹 `/etc/nginx/conf/conf.d`         
