@@ -95,7 +95,7 @@ fusermount -qzu /home/wwwroot/Cloud
 ## Aria2和ariang
 - Aria2
 
-wget -N --no-check-certificate https://raw.githubusercontent.com/ToyoDAdoubiBackup/doubi/master/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+wwget -N git.io/aria2.sh && chmod +x aria2.sh && bash aria2.sh
 - aria2文件夹 `/root/.aria2`    
 
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
