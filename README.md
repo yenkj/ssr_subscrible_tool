@@ -127,5 +127,22 @@ wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.c
 
 ## SSR订阅地址
 https://quirky-bardeen-bde2df.netlify.com/
+## GD百宝箱
+apt-get install curl git unzip zip python3-distutils python3 python3-pip
 
+apt-get install screen git && curl https://rclone.org/install.sh | sudo bash
+
+python3 gen_sa_accounts.py --quick-setup -1
+
+cp -r /root/AutoRclone/accounts/* /root/gd-utils/sa
+
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/vitaminx/gd-utils/master/gdutilsinstall.sh)"
+请输入机器人token并回车
+    Your Bot Token =>:1352493505:AAFzll21Y6WTheXV6eMTfe1B-roQKWOwbjc
+请输入你的域名(在cloudflare上解析到你机器人所在VPS的域名，格式：bot.abc.com)并回车
+    Your Domain Name =>:tg.199301.xyz
+请输入使用机器人的telegram账号ID(获取ID机器人@userinfobot)并回车
+    Your Telegram ID =>:445209991
+请输入转存默认目的地团队盘ID(不指定转存目的地默认改地址，脚本强制要求输入团队盘ID)并回车
+    Your Google Team Drive ID =>:0AO4-CX_XxBu3Uk9PVA
 
