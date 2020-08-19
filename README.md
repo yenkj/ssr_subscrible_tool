@@ -139,14 +139,18 @@ cp -r /root/AutoRclone/accounts/* /root/gd-utils/sa
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/vitaminx/gd-utils/master/gdutilsinstall.sh)"
 
 请输入机器人token并回车
+    
     Your Bot Token =>:1352493505:AAFzll21Y6WTheXV6eMTfe1B-roQKWOwbjc
 
 请输入你的域名(在cloudflare上解析到你机器人所在VPS的域名，格式：bot.abc.com)并回车
-    Your Domain Name =>:tg.199301.xyz
+   
+   Your Domain Name =>:tg.199301.xyz
 
 请输入使用机器人的telegram账号ID(获取ID机器人@userinfobot)并回车
+    
     Your Telegram ID =>:445209991
 
 请输入转存默认目的地团队盘ID(不指定转存目的地默认改地址，脚本强制要求输入团队盘ID)并回车
-    Your Google Team Drive ID =>:0AO4-CX_XxBu3Uk9PVA
+   
+   Your Google Team Drive ID =>:0AO4-CX_XxBu3Uk9PVA
 
