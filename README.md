@@ -96,11 +96,11 @@ fusermount -qzu /home/wwwroot/Cloud
 - Aria2
 
 wwget -N git.io/aria2.sh && chmod +x aria2.sh && bash aria2.sh
-- aria2文件夹 `/root/.aria2`    
+- aria2文件夹 `/root/.aria2c`    
 
 wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
 
-wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/autoupload.sh
+wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/upload.sh
 - ariang
 
 apt-get install unzip -y
@@ -111,7 +111,7 @@ cd /home/wwwroot/ariaNg
 
 wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip && unzip aria-ng-0.2.0.zip  
 - 创建下载目录 `mkdir -p /root/Download`  
-- 给予权限 `chmod +x /root/.aria2/autoupload.sh`
+- 给予权限 `chmod +x /root/.aria2c/upload.sh`
 - 重启aria2 `/etc/init.d/aria2 restart`
 
 
