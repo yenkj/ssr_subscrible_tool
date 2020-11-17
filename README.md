@@ -98,9 +98,9 @@ EOF
 ## Emby恢复
 ``` 
 systemctl stop emby-server
-rclone copy banana:share/emby.zip /root
+rm -rf /var/lib/emby
+rclone copy banana:share/emby.zip /var/lib
 unzip emby.zip
-cp -a /root/emby/* /var/lib/emby/
 chown -R emby:emby /var/lib/emby
 reboot
 ```
