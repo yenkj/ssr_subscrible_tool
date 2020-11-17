@@ -95,12 +95,14 @@ User=root
 WantedBy=default.target
 EOF
 ``` 
--开始启动：
+- 开始启动：
 
 `systemctl start rclone`
--设置开机自启：
+
+- 设置开机自启：
 
 `systemctl enable rclone`
+
 ## 卸载
 `fusermount -qzu /home/wwwroot/Cloud`
 ## Aria2和ariang
