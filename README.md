@@ -65,10 +65,10 @@ wget https://www.moerats.com/usr/shell/rclone_debian.sh && bash rclone_debian.sh
 
 rclone config
 ```
-- 设置开机自启：systemctl enable rclone
-- 重启：systemctl restart rclone
-- 停止：systemctl stop rclone
-- 状态：systemctl status rclone 
+- 设置开机自启：`systemctl enable rclone`
+- 重启：`systemctl restart rclone`
+- 停止：`systemctl stop rclone`
+- 状态：`systemctl status rclone` 
 
 ## 挂载
 ```
@@ -103,7 +103,8 @@ EOF
 wget -N git.io/aria2.sh && chmod +x aria2.sh && bash aria2.sh
 ```
 - aria2文件夹 
-`/root/.aria2c`    
+
+`/root/.aria2c`   
 - 配置文件
 ```
 https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
