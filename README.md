@@ -95,7 +95,15 @@ EOF
 - 重启：`systemctl restart rclone`
 - 停止：`systemctl stop rclone`
 - 状态：`systemctl status rclone` 
-
+## Emby恢复
+``` 
+systemctl stop emby-server
+rclone copy banana:share/emby.zip /root
+unzip emby.zip
+cp -a /root/emby/* /var/lib/emby/
+chown -R emby:emby /var/lib/emby
+reboot
+```
 ## Aria2和ariang
 - Aria2
 ```
