@@ -100,22 +100,20 @@ EOF
 fusermount -qzu /home/wwwroot/Cloud
 ## Aria2和ariang
 - Aria2
-
-wwget -N git.io/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+```
+wget -N git.io/aria2.sh && chmod +x aria2.sh && bash aria2.sh
+```
 - aria2文件夹 `/root/.aria2c`    
 
-wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
-
-wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/upload.sh
+- 配置文件夹 `wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf`
+            `https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/upload.sh`
 - ariang
-
+```
 apt-get install unzip -y
-
 mkdir /home/wwwroot/ariaNg  
-
 cd /home/wwwroot/ariaNg
-
 wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip && unzip aria-ng-0.2.0.zip  
+```
 - 创建下载目录 `mkdir -p /root/Download`  
 - 给予权限 `chmod +x /root/.aria2c/upload.sh`
 - 重启aria2 `/etc/init.d/aria2 restart`
@@ -125,11 +123,12 @@ wget https://www.moerats.com/usr/down/aria-ng-0.2.0.zip && unzip aria-ng-0.2.0.z
 - 重载nginx `systemctl reload nginx`      
 - nginx文件夹 `/etc/nginx/conf/conf.d`         
 ## openvz bbr
+```
 wget https://github.com/tcp-nanqinlang/lkl-rinetd/releases/download/1.1.0-nocheckvirt/tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
-
 bash tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
+```
 ## openvz v2ray
-wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/yenkj/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh
+`wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/yenkj/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh`
 
 ## SSR订阅地址
 https://quirky-bardeen-bde2df.netlify.com/
