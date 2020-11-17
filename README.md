@@ -20,7 +20,8 @@ Good luck, guys!
 ## 问题
 - 据反映安卓或者Windows客户端可能无法订阅成功，请为添加的每一个节点设置相同的**分组**
 
-## H5ai下载脚本
+## H5ai
+```
 apt-get install git -y
 
 git clone https://github.com/wulabing/h5ai_onekey_install-lnp-.git h5ai
@@ -34,6 +35,7 @@ bash h5ai.sh
 Debian 9运行命令
 
 sed -i '53,54d' h5ai.sh && bash h5ai.sh
+```
 
 - H5ai修改版
 ```
@@ -63,6 +65,11 @@ wget https://www.moerats.com/usr/shell/rclone_debian.sh && bash rclone_debian.sh
 
 rclone config
 ```
+- 设置开机自启：systemctl enable rclone
+- 重启：systemctl restart rclone
+- 停止：systemctl stop rclone
+- 状态：systemctl status rclone 
+
 ## 挂载
 ```
 mkdir /home/wwwroot/Cloud
@@ -87,12 +94,7 @@ User=root
 [Install]
 WantedBy=default.target
 EOF
-```
-- 设置开机自启：systemctl enable rclone
-- 重启：systemctl restart rclone
-- 停止：systemctl stop rclone
-- 状态：systemctl status rclone  
-
+``` 
 ## 卸载
 
 fusermount -qzu /home/wwwroot/Cloud
