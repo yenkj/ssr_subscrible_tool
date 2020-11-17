@@ -71,7 +71,7 @@ rclone mount banana:share /home/wwwroot/Cloud --copy-links --no-gzip-encoding --
 
 command="mount banana:share /home/wwwroot/Cloud --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000"
 ```
-## 以下是一整条命令，一起复制到SSH客户端运行
+- 以下是一整条命令，一起复制到SSH客户端运行
 ```
 cat > /etc/systemd/system/rclone.service <<EOF
 [Unit]
