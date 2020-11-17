@@ -96,17 +96,19 @@ WantedBy=default.target
 EOF
 ``` 
 ## 卸载
-
-fusermount -qzu /home/wwwroot/Cloud
+`fusermount -qzu /home/wwwroot/Cloud`
 ## Aria2和ariang
 - Aria2
 ```
 wget -N git.io/aria2.sh && chmod +x aria2.sh && bash aria2.sh
 ```
-- aria2文件夹 `/root/.aria2c`    
-
-- 配置文件夹 `wget https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf`
-            `https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/upload.sh`
+- aria2文件夹 
+`/root/.aria2c`    
+- 配置文件
+```
+https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/aria2.conf
+https://raw.githubusercontent.com/yenkj/ssr_subscrible_tool/master/upload.sh
+```
 - ariang
 ```
 apt-get install unzip -y
