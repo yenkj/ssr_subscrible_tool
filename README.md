@@ -65,12 +65,7 @@ wget https://www.moerats.com/usr/shell/rclone_debian.sh && bash rclone_debian.sh
 
 rclone config
 ```
-- 设置开机自启：`systemctl enable rclone`
-- 重启：`systemctl restart rclone`
-- 停止：`systemctl stop rclone`
-- 状态：`systemctl status rclone` 
-
-## 挂载
+- 挂载
 ```
 mkdir /home/wwwroot/Cloud
 
@@ -95,16 +90,12 @@ User=root
 WantedBy=default.target
 EOF
 ``` 
-- 开始启动：
+- 卸载：`fusermount -qzu /home/wwwroot/Cloud`
+- 设置开机自启：`systemctl enable rclone`
+- 重启：`systemctl restart rclone`
+- 停止：`systemctl stop rclone`
+- 状态：`systemctl status rclone` 
 
-`systemctl start rclone`
-
-- 设置开机自启：
-
-`systemctl enable rclone`
-
-## 卸载
-`fusermount -qzu /home/wwwroot/Cloud`
 ## Aria2和ariang
 - Aria2
 ```
