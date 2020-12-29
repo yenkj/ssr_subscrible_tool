@@ -112,7 +112,7 @@ systemctl stop plexmediaserver.service
 rm -rf /var/lib/plexmediaserver
 rclone copy banana:share/plex.zip /var/lib -v
 unzip plex.zip
-chown -R plex:plex /var/lib//plexmediaserver
+chown -R plex:plex /var/lib/plexmediaserver
 reboot
 ```
 ## Aria2和ariang
