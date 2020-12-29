@@ -106,6 +106,15 @@ unzip emby.zip
 chown -R emby:emby /var/lib/emby
 reboot
 ```
+## Plex恢复
+```
+systemctl stop plexmediaserver.service
+rm -rf /var/lib/plexmediaserver
+rclone copy banana:share/plex.zip /var/lib 
+unzip plex.zip
+chown -R plex:plex /var/lib//plexmediaserver
+reboot
+```
 ## Aria2和ariang
 - Aria2
 ```
