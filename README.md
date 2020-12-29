@@ -90,8 +90,10 @@ User=root
 WantedBy=default.target
 EOF
 ``` 
-- 卸载：`fusermount -qzu /home/wwwroot/Cloud`
+- 开始启动：`systemctl start rclone`
 - 设置开机自启：`systemctl enable rclone`
+
+- 卸载：`fusermount -qzu /home/wwwroot/Cloud`
 - 重启：`systemctl restart rclone`
 - 停止：`systemctl stop rclone`
 - 状态：`systemctl status rclone` 
