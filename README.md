@@ -101,7 +101,7 @@ EOF
 ``` 
 systemctl stop emby-server
 rm -rf /var/lib/emby
-rclone copy banana:share/emby.zip /var/lib
+rclone copy banana:share/emby.zip /var/lib -v
 unzip emby.zip
 chown -R emby:emby /var/lib/emby
 reboot
@@ -110,7 +110,7 @@ reboot
 ```
 systemctl stop plexmediaserver.service
 rm -rf /var/lib/plexmediaserver
-rclone copy banana:share/plex.zip /var/lib 
+rclone copy banana:share/plex.zip /var/lib -v
 unzip plex.zip
 chown -R plex:plex /var/lib//plexmediaserver
 reboot
