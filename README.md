@@ -20,6 +20,11 @@ Good luck, guys!
 ## 问题
 - 据反映安卓或者Windows客户端可能无法订阅成功，请为添加的每一个节点设置相同的**分组**
 
+
+## VPS一键添加/删除Swap虚拟内存
+
+``wget https://www.moerats.com/usr/shell/swap.sh && bash swap.sh``
+
 ## H5ai
 ```
 apt-get install git -y
