@@ -116,7 +116,7 @@ reboot
 systemctl stop plexmediaserver.service
 rm -rf /var/lib/plexmediaserver
 rclone copy banana:share/plex.zip /var/lib -v
-unzip plexmediaserver
+unzip plexmediaserver.zip
 chown -R plex:plex /var/lib/plexmediaserver
 reboot
 ```
