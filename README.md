@@ -74,9 +74,9 @@ rclone config
 ```
 mkdir /home/wwwroot/Cloud
 
-rclone mount banana:share /home/wwwroot/Cloud --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000
+rclone mount banana:share /home/wwwroot/Cloud  --allow-non-empty --allow-other --vfs-cache-mode writes --dir-cache-time 25h --buffer-size 0M --vfs-read-chunk-size 128M --vfs-read-chunk-size-limit 1G
 
-command="mount banana:share /home/wwwroot/Cloud --copy-links --no-gzip-encoding --no-check-certificate --allow-other --allow-non-empty --umask 000"
+command="mount banana:share /home/wwwroot/Cloud  --allow-non-empty --allow-other --vfs-cache-mode writes --dir-cache-time 25h --buffer-size 0M --vfs-read-chunk-size 128M --vfs-read-chunk-size-limit 1G"
 ```
 - 以下是一整条命令，一起复制到SSH客户端运行
 ```
