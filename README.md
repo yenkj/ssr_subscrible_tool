@@ -156,6 +156,8 @@ bash tcp_nanqinlang-rinetd-debianorubuntu-nocheckvirt-multiNIC.sh
 ## openvz v2ray
 `wget -N --no-check-certificate -q -O install.sh "https://raw.githubusercontent.com/yenkj/V2Ray_ws-tls_bash_onekey/master/install.sh" && chmod +x install.sh && bash install.sh`
 
+- 证书位置 `/root/.acme.sh/`
+
 ## SSR订阅地址
 https://quirky-bardeen-bde2df.netlify.com/
 ## GD百宝箱
