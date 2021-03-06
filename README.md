@@ -102,6 +102,17 @@ EOF
 - 重启：`systemctl restart rclone`
 - 停止：`systemctl stop rclone`
 - 状态：`systemctl status rclone` 
+## openwrt
+`fusermount -qzu /mnt/sda3/docker/emby/share`
+`rclone mount banana:share /mnt/sda3/docker/emby/share \
+--allow-non-empty \
+--allow-other \
+--vfs-cache-mode writes \
+--dir-cache-time 25h \
+--buffer-size 0M \
+--vfs-read-chunk-size 128M \
+--vfs-read-chunk-size-limit 1G &`
+
 ## Emby恢复
 ``` 
 systemctl stop emby-server
