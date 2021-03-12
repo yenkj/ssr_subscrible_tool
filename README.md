@@ -133,6 +133,26 @@ unzip plexmediaserver.zip
 chown -R plex:plex /var/lib/plexmediaserver
 reboot
 ```
+## openwrt的Emby
+```
+docker run \
+-d \
+--net=host \
+--name=emby2 \
+-e PUID=1000 \
+-e PGID=1000 \
+-e TZ=Asia/Shanghai  \
+-p 1900:1900 \
+-p 7359:7359 \
+-p 7359:7359/udp \
+-p 8096:8096 \
+-p 8920:8920 \
+-v /mnt/sda3/docker/emby/config:/config \
+-v /mnt/sda3/docker/emby/share:/mnt/share \
+-v /dev/shm/cache:/dev/shm/cache \
+--restart=always \
+linuxserver/emby:arm64v8-beta
+```
 ## Aria2和ariang
 - Aria2
 ```
