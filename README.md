@@ -152,6 +152,8 @@ docker run \
 -v /dev/shm/cache:/dev/shm/cache \
 --restart=always \
 linuxserver/emby:arm64v8-beta
+docker ps -a
+docker container update -m 500M --memory-swap=2048M 26caa2084196
 ```
 ## Aria2和ariang
 - Aria2
