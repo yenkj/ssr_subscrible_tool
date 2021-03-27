@@ -151,7 +151,7 @@ docker run \
 -v /mnt/sda3/docker/emby/share:/mnt/share \
 -v /dev/shm/cache:/dev/shm/cache \
 --restart=always \
-linuxserver/emby:arm64v8-beta
+linuxserver/emby:arm64v8-latest
 docker ps -a
 docker container update -m 500M --memory-swap=2048M 26caa2084196
 ```
