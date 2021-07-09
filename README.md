@@ -153,7 +153,7 @@ docker run \
 --restart=always \
 linuxserver/emby:arm64v8-latest
 docker ps -a
-docker container update -m 500M --memory-swap=2048M 26caa2084196
+docker container update -m 800M --memory-swap=2048M 26caa2084196
 ```
 ## Aria2和ariang
 - Aria2
